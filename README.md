@@ -1,4 +1,4 @@
-#2021-1학기 데이터분석캡스톤디자인 프로젝트 결과물
+# 2021-1학기 데이터분석캡스톤디자인 프로젝트 결과물
 
 ## 1. Introduction
 
@@ -15,11 +15,9 @@ Facebook, Twitter, Instagram과 같은 다양한 Social Media의 발달로 사�
 ## 2. Data Anlaysis
 
 - 사용한 언어: Python
-
 - 사용한 Tool: Google Colab
-
 - 사용한 라이브러리: sklearn, numpy, padnas, nltk 등
-- 
+ 
 ### 개발 환경 및 라이브러리
 
 ### 데이터 전처리
@@ -33,28 +31,21 @@ Facebook, Twitter, Instagram과 같은 다양한 Social Media의 발달로 사�
   - Word2Vec
 - Training Dataser과 Test Dataset으로 나누어 각 모델에 대해 학습과 테스트 과정을 거쳤다.
 
-
-### 진행 결과
+### 모델 학습
 총 8가지 Emotion Classification 모델에 대한 비교를 진행하였다. 선정한 모델은 다음과 같다; Multinomial Naive Bayes, Gaussian Naive Bayes, Logistic Regression, Support Vector Machine, Decision Tree, Random Forest, K-Nearest Neighbor, Multi-Layer Perceptron
 
+### 진행 결과
+
 각 모델을 적용하여 얻은 결과는 다음과 같다.
-+ Multinominal Naive Bayes: Accuracy score is  0.639344262295082
-
-+ Gaussian Naive Bayes: Accuracy score is  0.4426229508196721
-
-+ Logistic Regression: Accuracy score is  0.6885245901639344
-
++ Multinominal Naive Bayes: Accuracy score is 0.639344262295082
++ Gaussian Naive Bayes: Accuracy score is 0.4426229508196721
++ Logistic Regression: Accuracy score is 0.6885245901639344
 + Support Vector Machine: Accuracy score is 0.6885245901639344
-
 + Desision Tree: Accuracy score is 0.5737704918032787
-
 + Random Forest: Accracy score is 0.6065573770491803
-
 + K-Nearest Neighbor: Accruacy score is 0.5081967213114754
-
 + Multi-Layer Perceptron: Accuracy is 0.7049180327868853
-
-여덟 개의 모델을 비교해봤을 때 Multi-Layer Perceptron 모델이 약 0.705의 정확도로 가장 높았다.
+Multi-Layer Perceptron 모델이 약 0.705로 정확도가 가장 높았다.
 
 ## 3. Discussion
 
@@ -62,11 +53,11 @@ Facebook, Twitter, Instagram과 같은 다양한 Social Media의 발달로 사�
 
 텍스트에서 감정을 파악하는 모델을 통하여 다음과 같은 다양한 활용이 가능해질 것이다.
 1. Social Media 유저의 정신 건강 상태 감지
-특정 유저의 감정 분석 결과에 sadness, fear, anger 등과 같은 부정적 키워드가 비정상적으로 많을 시 우울증을 의심해본다든지 유저의 정신 건강 상태에 대해 경고를 할 수 있다. 이에 그치지 않고 우울도가 높은 유저의 피드에 우울을 개선할 수 있는 상담이나 운동 등에 대한 광고 및 조언을 노출할 수 있다.
+  특정 유저의 감정 분석 결과에 sadness, fear, anger 등과 같은 부정적 키워드가 비정상적으로 많을 시 우울증을 의심해본다든지 유저의 정신 건강 상태에 대해 경고를 할 수 있다. 이에 그치지 않고 우울도가 높은 유저의 피드에 우울을 개선할 수 있는 상담이나 운동 등에 대한 광고 및 조언을 노출할 수 있다.
 2. 특정 키워드나 인물에 대한 감정(인식) 파악
-기업에서 새로 출시한 상품이라든지, 스타나 정치인에 대한 사람들의 감정을 알아볼 수 있다. 이를 바탕으로 앞으로의 홍보 및 이미지 개선 방법에 참고할 수 있다.
+  기업에서 새로 출시한 상품이라든지, 스타나 정치인에 대한 사람들의 감정을 알아볼 수 있다. 이를 바탕으로 앞으로의 홍보 및 이미지 개선 방법에 참고할 수 있다.
 3. 특정 기간의 사람들이 감정 변화 관찰
-선거, 연휴와 같은 이벤트가 있는 기간 또는 월별, 계절별로 사람들의 감정 변화를 관찰할 수 있을 것이다. 예를 들어 한여름의 폭염이 이어지는 기간에 사람들의 부정적 감정이 얼마나 커지는지 등을 알아볼 수 있을 것이다.
+  선거, 연휴와 같은 이벤트가 있는 기간 또는 월별, 계절별로 사람들의 감정 변화를 관찰할 수 있을 것이다. 예를 들어 한여름의 폭염이 이어지는 기간에 사람들의 부정적 감정이 얼마나 커지는지 등을 알아볼 수 있을 것이다.
 
 
 ### 결론 및 제언
