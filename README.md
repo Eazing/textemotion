@@ -14,12 +14,11 @@ Facebook, Twitter, Instagram과 같은 다양한 Social Media의 발달로 사�
 
 ## 2. Data Anlaysis
 
+### 개발 환경 및 라이브러리
 - 사용한 언어: Python
 - 사용한 Tool: Google Colab
 - 사용한 라이브러리: sklearn, numpy, padnas, nltk 등
  
-### 개발 환경 및 라이브러리
-
 ### 데이터 전처리
 - 텍스트 데이터베이스: ISEAR.csv (감정을 표현하는 문장 - 해당하는 감정)
 - 감정 Label: 'joy', 'fear', 'anger', 'sadness', 'disgust', 'shame', 'guilt’
@@ -34,7 +33,8 @@ Facebook, Twitter, Instagram과 같은 다양한 Social Media의 발달로 사�
 ### 모델 학습
 총 8가지 Emotion Classification 모델에 대한 비교를 진행하였다. 선정한 모델은 다음과 같다; Multinomial Naive Bayes, Gaussian Naive Bayes, Logistic Regression, Support Vector Machine, Decision Tree, Random Forest, K-Nearest Neighbor, Multi-Layer Perceptron
 
-### 진행 결과
+
+## 3. Results
 
 각 모델을 적용하여 얻은 결과는 다음과 같다.
 + Multinominal Naive Bayes: Accuracy score is 0.639344262295082
@@ -47,7 +47,7 @@ Facebook, Twitter, Instagram과 같은 다양한 Social Media의 발달로 사�
 + Multi-Layer Perceptron: Accuracy is 0.7049180327868853
 Multi-Layer Perceptron 모델이 약 0.705로 정확도가 가장 높았다.
 
-## 3. Discussion
+## 4. Expected effect and Future works
 
 ### 기대효과 및 활용방안
 
