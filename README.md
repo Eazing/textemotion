@@ -1,30 +1,40 @@
-2021-1학기 데이터분석캡스톤디자인 프로젝트 결과물
+#2021-1학기 데이터분석캡스톤디자인 프로젝트 결과물
 
-# 과제 개요
+## 1. Introduction
 
+### 주제선정배경
 Facebook, Twitter, Instagram과 같은 다양한 Social Media의 발달로 사람들이 본인의 생각이나 감정을 짧은텍스트로 표현하는 일이 많아졌다. 텍스트에서 감정을 파악하는 모델을 통하여 Social Media 상의 우울증감지와 같은 다양한 활용이 가능해질 것이다.
 
+### 주요 내용
 과제의 주요 내용은 크게 네 가지로 나눌 수 있다. 1) 영어 텍스트 데이터를 찾고 그 텍스트들을 전처리한다. 2) 전처리 완료된 텍스트에서 다양한 모델을 통해 감정을 추출한다. 3) 각 모델에서 추출한 감정이 얼마나 정확도를 보이는지 검증한다. 영어 텍스트 데이터는 감정이 Labeling 되어 있는 데이터베이스를 활용한다. 인식할 감정은 anger, fear, disgust, joy, sadness, surprise 총 6가지다. 텍스트 전처리 방법은 Tokenization, Noise removal, Stop words removal, Stemming을 포함하여 TF-IDF,wordtovec, fasttext 등의 방법으로 수행한다. 성능을 비교할 모델은 MLP, SVM, RNN(LSTM)이며, 모델 평가 방법은 Accuracy와 F score이다.
 
+### 최종 목표
 최종 결과물의 목표는 3가지 이상의 모델을 비교하여 어떤 모델이 가장 정확도가 높은지 알아보는 것이다. 텍스트에서 감정을 파악하는 모델을 통하여 다음과 같은 다양한 활용이 가능해질 것이다; Social Media 유저의 우울증 감지, 특정 키워드에 대한 감정(인식) 파악, 특정 기간 별 사람들이 감정 변화 관찰
 
 
-# 진행 내용
-
-- 텍스트 데이터베이스: ISEAR.csv (감정을 표현하는 문장 - 해당하는 감정)
+## 2. Data Anlaysis
 
 - 사용한 언어: Python
 
 - 사용한 Tool: Google Colab
 
 - 사용한 라이브러리: sklearn, numpy, padnas, nltk 등
+- 
+### 개발 환경 및 라이브러리
 
+### 데이터 전처리
+- 텍스트 데이터베이스: ISEAR.csv (감정을 표현하는 문장 - 해당하는 감정)
 - 감정 Label: 'joy', 'fear', 'anger', 'sadness', 'disgust', 'shame', 'guilt’
+- Preprocessing
+  - Tokenizes text
+  - Clean sentence(Stop Words, Emoji, Emoticon, URLs, HTML tags, Number, Punctuation Marks)
+  - Lower casing
+  - TF-IDF
+  - Word2Vec
+- Training Dataser과 Test Dataset으로 나누어 각 모델에 대해 학습과 테스트 과정을 거쳤다.
 
-Preprocessing 과정에서 Tokenizes text, Clean sentence(Stop Words, Emoji, Emoticon, URLs, HTML tags, Number, Punctuation Marks), Lower casing, TF-IDF, Word2Vec 등의 과정을 거쳤다. 토큰화 된 데이터들을 Training Dataser과 Test Dataset으로 나누어 각 모델에 대해 학습과 테스트 과정을 거쳤다.
 
-
-# 진행 결과
+### 진행 결과
 총 8가지 Emotion Classification 모델에 대한 비교를 진행하였다. 선정한 모델은 다음과 같다; Multinomial Naive Bayes, Gaussian Naive Bayes, Logistic Regression, Support Vector Machine, Decision Tree, Random Forest, K-Nearest Neighbor, Multi-Layer Perceptron
 
 각 모델을 적용하여 얻은 결과는 다음과 같다.
@@ -46,8 +56,9 @@ Preprocessing 과정에서 Tokenizes text, Clean sentence(Stop Words, Emoji, Emo
 
 여덟 개의 모델을 비교해봤을 때 Multi-Layer Perceptron 모델이 약 0.705의 정확도로 가장 높았다.
 
+## 3. Discussion
 
-# 기대효과 및 활용방안
+### 기대효과 및 활용방안
 
 텍스트에서 감정을 파악하는 모델을 통하여 다음과 같은 다양한 활용이 가능해질 것이다.
 1. Social Media 유저의 정신 건강 상태 감지
@@ -58,6 +69,6 @@ Preprocessing 과정에서 Tokenizes text, Clean sentence(Stop Words, Emoji, Emo
 선거, 연휴와 같은 이벤트가 있는 기간 또는 월별, 계절별로 사람들의 감정 변화를 관찰할 수 있을 것이다. 예를 들어 한여름의 폭염이 이어지는 기간에 사람들의 부정적 감정이 얼마나 커지는지 등을 알아볼 수 있을 것이다.
 
 
-# 결론 및 제언
+### 결론 및 제언
 
 선정한 8개의 모델의 정확도를 모두 비교해봤을 때 Multi-Layer Perceptron 모델이 약 0.705로 정확도가 가장 높았다. 그 다음으로는 Logistic Regression과 Support Vector Machine의 정확도가 약 0.689로 비슷하게 높았다. 우리는 이 실험 결과를 통해, 텍스트에서 감정을 추출하는 모델이 약 70퍼센트 정도의 확률로 해당 텍스트의 감정을 추측해낼 수 있다는 것을 알 수 있었다. 우리는 Preprocessing 과정이나, Model의 세부 조건을 달리 하면서 70퍼센트 보다 우수한 성능을 가진 감정 추출 모델을 적용할 수 있을 것이다. 이러한 모델을 가지고 Social Media의 대중들의 반응이나, 특정 개인의 감정 변화를 알게될 수 있을 것이다.
