@@ -24,8 +24,10 @@ Facebook, Twitter, Instagram과 같은 다양한 Social Media의 발달로 사�
 - 사용한 라이브러리: sklearn, numpy, padnas, nltk 등
  
 ### 데이터 전처리
-- 텍스트 데이터베이스: ISEAR.csv (감정을 표현하는 문장 - 해당하는 감정)
-- 감정 Label: 'joy', 'fear', 'anger', 'sadness', 'disgust', 'shame', 'guilt’
+- 텍스트 데이터베이스
+  - ISEAR.csv (감정을 표현하는 문장 - 해당하는 감정)
+- 감정 Label
+  - 'joy', 'fear', 'anger', 'sadness', 'disgust', 'shame', 'guilt’
 - Preprocessing
   - Tokenizes text
   - Clean sentence(Stop Words, Emoji, Emoticon, URLs, HTML tags, Number, Punctuation Marks)
@@ -57,6 +59,7 @@ Multi-Layer Perceptron 모델이 약 0.705로 정확도가 가장 높았다.
 ### 기대효과 및 활용방안
 
 텍스트에서 감정을 파악하는 모델을 통하여 다음과 같은 다양한 활용이 가능해질 것이다.
+
 1. Social Media 유저의 정신 건강 상태 감지
   
   특정 유저의 감정 분석 결과에 sadness, fear, anger 등과 같은 부정적 키워드가 비정상적으로 많을 시 우울증을 의심해본다든지 유저의 정신 건강 상태에 대해 경고를 할 수 있다. 이에 그치지 않고 우울도가 높은 유저의 피드에 우울을 개선할 수 있는 상담이나 운동 등에 대한 광고 및 조언을 노출할 수 있다.
